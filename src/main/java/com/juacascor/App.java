@@ -1,5 +1,7 @@
 package com.juacascor;
 
+import org.uncommons.maths.statistics.DataSet;
+
 /**
  * Hello world!
  *
@@ -13,8 +15,10 @@ public class App
 
   public static Double media(Double d1, Double d2) 
   {
-	
-     return (d1+d2)/2;
+	 DataSet ds = new DataSet();
+	 ds.addValue(d1);
+	 ds.addValue(d2);
+     return ds.getArithmeticMean();
      }
 
 }
